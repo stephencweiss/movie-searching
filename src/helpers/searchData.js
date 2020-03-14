@@ -1,11 +1,6 @@
-import { topMovies } from "../data/topMovies";
-
+const dotenv = require( "dotenv");
+dotenv.config();
 
 export const searchData = searchText => {
-  const regex = new RegExp(searchText, "gi");
-  fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=96287ec0`)
-  
-  return new Promise(resolve =>
-    resolve(topMovies.filter(m => m.title.match(regex)))
-  );
+  return fetch(`http://www.omdbapi.com/?t=${searchText}&apikey=${process.env.API_KEY}`).then(res => res.json())
 };
