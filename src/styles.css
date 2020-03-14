@@ -1,5 +1,7 @@
 html {
   font-size: 16px;
+  background-image: url(https://images.unsplash.com/photo-1578849278619-e73505e9610f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80);
+  background-size: cover;
 }
 input {
   width: 100%;
@@ -39,6 +41,7 @@ span.query-highlight {
 .movie-result {
   margin-bottom: 1em;
   padding: 1em;
+  background-color: aliceblue;
 }
 
 .movie-result:last-of-type{
