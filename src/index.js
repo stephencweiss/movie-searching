@@ -1,4 +1,3 @@
-// import "./styles.css";
 import { searchData } from "./helpers/searchData";
 
 const searchInput = document.querySelector(".search-input");
@@ -8,16 +7,18 @@ function showSearchResults(searchQuery) {
   const regex = new RegExp(searchQuery, "gi");
   searchData(searchQuery).then(results => {
     const html = results.map(movie => {
-      const title = movie.title.replace(
+      console.log({ movie });
+      const title = movie.Title.replace(
         regex,
         `<span class='query-highlight'>${searchQuery}</span>`
       );
 
       return `
-      <li>
+      <li >
         <span class='title'>${title}</span>
-        <span class='rating'>${movie.rating}</span>
-      </li>
+        <span class='year'>${movie.Year}</span>
+        <img src=${movie.Poster}></img>
+        </li>
     `;
     });
 
