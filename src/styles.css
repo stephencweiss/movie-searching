@@ -27,8 +27,34 @@ span.query-highlight {
 }
 .results li {
   border: solid;
-  margin: 0;
-  padding: 10px;
   display: flex;
   justify-content: space-between;
+}
+
+.cropped-poster {
+  width: 200;
+  height: 300;
+  object-fit: cover;
+}
+.movie-result {
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.movie-result:last-of-type{
+  padding-bottom: 0;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.year {
+  font-size: 1.25rem;
 }
